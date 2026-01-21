@@ -1,0 +1,48 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1610996883296-6e1d6d670691?q=80&w=1920&auto=format&fit=crop'); /* Imagem provisória de alta qualidade */
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #0A0A0A 0%, rgba(10,10,10,0.8) 50%, rgba(10,10,10,0.4) 100%);
+}
+.hero-content { position: relative; z-index: 10; max-width: 600px; }
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+.services-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-primary {
+  background: var(--brand-yellow);
+  color: #000;
+  font-weight: 800;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }

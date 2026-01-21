@@ -1,0 +1,25 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
+.btn-cta {
+  background: var(--brand-yellow);
+  color: black;
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+.btn-cta:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 184, 0, 0.3); }

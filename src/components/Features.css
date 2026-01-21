@@ -1,0 +1,18 @@
+.features-section { background: var(--brand-light-gray); padding: 40px 0; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255,255,255,0.03);
+  padding: 20px;
+  border-radius: 12px;
+}
+.feature-text h4 { font-size: 1rem; margin-bottom: 2px; }
+.feature-text p { font-size: 0.8rem; color: #888; }
+.text-brand-yellow { color: var(--brand-yellow); }
+.highlight-box { border: 1px solid rgba(255, 184, 0, 0.2); }
