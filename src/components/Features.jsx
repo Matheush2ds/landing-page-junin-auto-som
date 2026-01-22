@@ -1,66 +1,31 @@
 import React from 'react';
-import { ShieldCheck, CreditCard, Heart, Award } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ShieldCheck, UserCheck, Award, Clock } from 'lucide-react';
 import './Features.css';
 
+const features = [
+  { icon: Award, title: "Qualidade Premium", text: "Acabamento impecável e materiais de primeira linha." },
+  { icon: ShieldCheck, title: "Garantia Real", text: "Nota fiscal e garantia de serviço e produtos." },
+  { icon: UserCheck, title: "Profissionais Capacitados", text: "Equipe treinada para mexer em carros de luxo." },
+  { icon: Clock, title: "Agilidade", text: "Respeitamos seu tempo com agendamento pontual." },
+];
+
 const Features = () => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 }
-  };
-
   return (
     <section className="features-section">
-      <motion.div 
-        className="container features-grid"
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
-        <motion.div className="feature-box" variants={item}>
-          <Award className="text-brand-yellow" size={32} />
-          <div className="feature-text">
-            <h4>Qualidade Premium</h4>
-            <p>Acabamento impecável</p>
+      <div className="container features-grid">
+        {features.map((f, i) => (
+          <div className="feature-box" key={i}>
+            <div className="icon-box">
+              <f.icon size={28} className="text-brand-yellow" />
+            </div>
+            <div>
+              <h4>{f.title}</h4>
+              <p>{f.text}</p>
+            </div>
           </div>
-        </motion.div>
-
-        <motion.div className="feature-box" variants={item}>
-          <CreditCard className="text-brand-yellow" size={32} />
-          <div className="feature-text">
-            <h4>Parcele no Cartão</h4>
-            <p>Facilidade no pagamento</p>
-          </div>
-        </motion.div>
-
-        <motion.div className="feature-box" variants={item}>
-          <Heart className="text-brand-yellow" size={32} />
-          <div className="feature-text">
-            <h4>Paixão por Carros</h4>
-            <p>Cuidamos como se fosse nosso</p>
-          </div>
-        </motion.div>
-
-        {/* Diferencial Forte de Garantia */}
-        <motion.div className="feature-box highlight-box" variants={item}>
-          <ShieldCheck className="text-brand-yellow" size={32} />
-          <div className="feature-text">
-            <h4>Garantia Total</h4>
-            <p>Suporte e segurança no serviço</p>
-          </div>
-        </motion.div>
-      </motion.div>
+        ))}
+      </div>
     </section>
   );
 };
-
 export default Features;

@@ -1,45 +1,100 @@
 :root {
   --brand-yellow: #FFB800;
-  --brand-dark: #0A0A0A;
-  --brand-gray: #1A1A1A;
-  --brand-light-gray: #2A2A2A;
+  --brand-yellow-hover: #E5A600;
+  --brand-dark: #050505;
+  --brand-card: #121212;
+  --brand-border: rgba(255, 255, 255, 0.1);
   --text-main: #FFFFFF;
-  --text-muted: #A1A1AA;
-  --transition: all 0.3s ease;
+  --text-muted: #A3A3A3;
+  --glass: rgba(20, 20, 20, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--brand-dark);
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-a { text-decoration: none; color: inherit; }
-button { cursor: pointer; border: none; font-family: inherit; }
-img { max-width: 100%; display: block; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
 
 /* Utilitários */
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
+.section-padding { padding: 100px 0; }
+
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 .section-subtitle {
   text-align: center;
   color: var(--text-muted);
-  margin-bottom: 3rem;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+  font-size: 1.1rem;
 }
 
-span.highlight { color: var(--brand-yellow); }
+.highlight { color: var(--brand-yellow); }
+
+/* Botão Premium Global */
+.btn-primary {
+  background: var(--brand-yellow);
+  color: #000;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 184, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--brand-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 184, 0, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--brand-border);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-outline:hover {
+  border-color: var(--brand-yellow);
+  color: var(--brand-yellow);
+}

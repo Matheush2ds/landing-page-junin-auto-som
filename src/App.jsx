@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
-import Services from './components/Services';
-import Footer from './components/Footer';
 import SEO from './components/SEO';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
+
+const Features = lazy(() => import('./components/Features'));
+const UpgradeSection = lazy(() => import('./components/UpgradeSection'));
+const Services = lazy(() => import('./components/Services'));
+const Footer = lazy(() => import('./components/Footer'));
+
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center h-20 bg-brand-dark">
+    <div className="w-8 h-8 border-4 border-brand-yellow border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 function App() {
   return (
@@ -14,9 +23,15 @@ function App() {
       <div className="bg-brand-dark min-h-screen">
         <Navbar />
         <Hero />
-        <Features />
-        <Services />
-        <Footer />
+        
+        <Suspense fallback={<LoadingSpinner />}>
+          <Features />
+          <UpgradeSection />
+          <Services />
+          <Footer />
+        </Suspense>
+        
+        <FloatingWhatsApp />
       </div>
     </HelmetProvider>
   );

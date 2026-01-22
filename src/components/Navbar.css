@@ -1,25 +1,63 @@
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(10, 10, 10, 0.9);
-  backdrop-filter: blur(10px);
+  background: rgba(5, 5, 5, 0.7); 
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
+  transition: all 0.3s ease;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
-.btn-cta {
+
+.nav-logo {
+  height: 45px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover .nav-logo {
+  transform: scale(1.05);
+}
+
+.btn-cta, 
+.btn-cta-nav {
   background: var(--brand-yellow);
   color: black;
   font-weight: 700;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 50px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
   transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(255, 184, 0, 0.2);
 }
-.btn-cta:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 184, 0, 0.3); }
+
+.btn-cta:hover,
+.btn-cta-nav:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 184, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    height: 35px;
+  }
+  
+  .btn-cta span,
+  .btn-cta-nav span {
+    font-size: 0.85rem;
+  }
+}

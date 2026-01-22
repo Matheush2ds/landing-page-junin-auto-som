@@ -1,16 +1,35 @@
-# React + Vite
+# Junin Auto Som - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Status:** Em Produção 🚀
+> **Stack:** React + Vite + Framer Motion 
 
-Currently, two official plugins are available:
+## Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto consiste na refatoração completa e modernização da presença digital da **Junin Auto Som (Unidade Cidade Jardim)**. 
 
-## React Compiler
+### O Contexto (De WordPress para React)
+A versão anterior do site utilizava **WordPress**, apresentando problemas de performance (LCP alto), layout quebrava em dispositivos móveis e um design visualmente datado que não transmitia a autoridade da marca no setor de acessórios de luxo.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Solução Implementada
+Desenvolvi uma **Landing Page de Alta Conversão** focada em performance e UX/UX Design Senior.
 
-## Expanding the ESLint configuration
+**Principais Melhorias:**
+* **Design Premium Dark Mode:** Estética moderna utilizando *Glassmorphism*, paleta de cores da marca (#FFB800) e tipografia refinada.
+* **SEO Técnico Avançado:** Implementação de `React Helmet Async` para meta-tags dinâmicas, dados estruturados (Schema.org) e otimização semântica para indexação no Google.
+* **Foco em Conversão (CRO):** * Botões de CTA estrategicamente posicionados.
+    * Botão flutuante do WhatsApp fixo.
+    * Seção específica para dores do cliente ("Comprou e não sabe instalar?").
+* **Carrossel de Fachada:** Destaque imediato para a estrutura física da loja para gerar confiança.
+* **Performance:** Migração para Vite, garantindo *load time* instantâneo e pontuação alta no Google PageSpeed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tecnologias
+
+* **Core:** React 19, Vite.
+* **Estilização:** CSS3 Moderno (Variaveis, Flexbox, Grid), Design Responsivo.
+* **Animações:** Framer Motion (para transições suaves e entrada de elementos).
+* **Ícones:** Lucide React.
+* **SEO:** React Helmet Async.
+
+---
+
+Desenvolvido com foco em **Performance** e **Conversão**.
