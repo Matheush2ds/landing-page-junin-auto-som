@@ -5,7 +5,7 @@ const SEO = () => {
   const pageTitle = "Junin Auto Som | Cidade Jardim - Som, PPF e Window Blue";
   const pageDesc = "Transforme seu carro em Goiânia. Especialistas em Som Automotivo Premium, Window Blue Original, PPF e Estética. Instalação com garantia e padrão VIP.";
   const siteUrl = "https://junincidadejardim.com.br";
-  const siteImage = "https://junincidadejardim.com.br/social-share.jpg"; // Certifique-se de ter essa imagem
+  const siteImage = "https://junincidadejardim.com.br/social-share.jpg"
 
   const schema = {
     "@context": "https://schema.org",
