@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="footer" id="contato">
       <div className="container footer-grid">
         
-        {/* Coluna da Marca */}
         <div className="footer-col">
           <h3>Junin <span className="highlight">Cidade Jardim</span></h3>
           <p className="brand-desc">
@@ -16,9 +15,8 @@ const Footer = () => {
           </p>
           
           <div className="contact-list">
-            {/* Link direto para o GPS */}
             <a 
-              href="https://www.google.com/maps/search/?api=1&query=Junin+Auto+Som+Cidade+Jardim" 
+              href="https://maps.google.com/?cid=13618451717391919682" 
               target="_blank" 
               rel="noopener noreferrer"
               className="info-item"
@@ -28,7 +26,6 @@ const Footer = () => {
               <span>Av. Armando de Godói, 370 - Cidade Jardim</span>
             </a>
 
-            {/* Link direto para discar */}
             <a href="tel:+556236363610" className="info-item" title="Ligar Agora">
               <Phone className="text-brand-yellow" size={20} />
               <span>(62) 3636-3610</span>
@@ -51,7 +48,6 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Coluna do Mapa */}
         <div className="footer-col">
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px'}}>
              <h3>Nossa Localização</h3>
@@ -62,7 +58,7 @@ const Footer = () => {
           
           <div className="map-container">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.094586369064!2d-49.2925!3d-16.6805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQwJzQ5LjgiUyA0OcKwMTcnMzMuMCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.062867087854!2d-49.3118019!3d-16.6816842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935e9789fd31f2b1%3A0xbcfdd11796181e42!2sJunin%20Auto%20Som-%20Cidade%20Jardim!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
               width="100%" 
               height="100%" 
               style={{border:0}} 
@@ -74,7 +70,7 @@ const Footer = () => {
           </div>
           
           <a 
-            href="https://www.google.com/maps/search/?api=1&query=Junin+Auto+Som+Cidade+Jardim" 
+            href="https://maps.google.com/?cid=13618451717391919682" 
             target="_blank"
             rel="noopener noreferrer"
             className="map-link-external"
